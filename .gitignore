@@ -1,0 +1,13 @@
+# Visual Studio temporary files
+.vs/
+
+# Build output
+bin/
+obj/
+
+# Visual Studio Code settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db

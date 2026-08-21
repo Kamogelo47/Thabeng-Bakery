@@ -1,0 +1,607 @@
+/* =====================================================
+   THABENG BAKERY - MAIN WEBSITE STYLESHEET
+   WEDE5020 - PART 1
+   ===================================================== */
+
+
+/* =====================================================
+   GENERAL STYLES
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #fff8ed;
+    color: #3e2723;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+    background-color: #5d4037;
+    color: #ffffff;
+    padding: 20px 5%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    color: #f3d58a;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f3d58a;
+}
+
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(62, 39, 35, 0.65),
+            rgba(62, 39, 35, 0.65)
+        ),
+        url("../images/home/bakery.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 80px 5%;
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.hero-subtitle,
+.section-subtitle {
+    color: #d4a64a;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 52px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background-color: #d4a64a;
+
+    color: #3e2723;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #f3d58a;
+
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background-color: transparent;
+
+    color: #ffffff;
+
+    border: 2px solid #d4a64a;
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+   ===================================================== */
+
+main {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+section {
+    padding: 70px 5%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 36px;
+
+    color: #5d4037;
+}
+
+
+/* =====================================================
+   WELCOME SECTION
+   ===================================================== */
+
+.welcome {
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.welcome p {
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   PRODUCT HIGHLIGHTS - HOMEPAGE
+   ===================================================== */
+
+.highlights {
+    background-color: #f5e6d3;
+}
+
+.product-highlights {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.highlight-card {
+    background-color: #ffffff;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-card h3 {
+    color: #6d4c41;
+
+    margin-bottom: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =====================================================
+   CALL TO ACTION
+   ===================================================== */
+
+.call-to-action {
+    text-align: center;
+
+    background-color: #6d4c41;
+
+    color: #ffffff;
+}
+
+.call-to-action h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    background-color: #3e2723;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =====================================================
+   PRODUCTS PAGE
+   ===================================================== */
+
+.page-intro {
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.page-intro > p {
+    margin-top: 20px;
+
+    color: #5d4037;
+}
+
+
+/* Product grid */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* Product card */
+
+.product-card {
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Product image */
+
+.product-image {
+    width: 100%;
+
+    height: 250px;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+
+/* Product information */
+
+.product-content {
+    padding: 25px;
+
+    text-align: center;
+}
+
+.product-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: #5d4037;
+
+    margin-bottom: 10px;
+}
+
+.product-content p {
+    color: #6d4c41;
+
+    margin-bottom: 15px;
+}
+
+
+/* Product price */
+
+.product-price {
+    font-weight: bold;
+
+    color: #b8860b !important;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   ENQUIRY PAGE
+   ===================================================== */
+
+.enquiry-section {
+    background-color: #f5e6d3;
+}
+
+.enquiry-container {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+/* Enquiry form */
+
+.enquiry-form {
+    background-color: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Form groups */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+
+/* Form labels */
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #5d4037;
+
+    font-weight: bold;
+}
+
+
+/* Text fields, select and textarea */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d7c2ae;
+
+    border-radius: 5px;
+
+    background-color: #fffaf5;
+
+    color: #3e2723;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+
+/* Focus effect */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d4a64a;
+
+    box-shadow: 0 0 0 3px rgba(212, 166, 74, 0.15);
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* Submit button */
+
+.form-button {
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN - TABLETS
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .product-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN - MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .product-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .product-image {
+        height: 230px;
+    }
+
+    .enquiry-form {
+        padding: 25px;
+    }
+}
