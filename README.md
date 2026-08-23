@@ -4,9 +4,8 @@
 
 ### Student Information
 
-**Student Name:** [Your Full Name]  
-**Student Number:** [Your Student Number]  
-**Group:** [Your Group, if applicable]
+**Student Name:Kamogelo Matseke  
+**Student Number: ST10494978 
 
 ---
 
