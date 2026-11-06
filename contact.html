@@ -1,133 +1,270 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | Thabeng Bakery</title>
+    <title>Contact Thabeng Bakery | Hartbeespoort, North West</title>
+
+    <meta name="description" content="Contact Thabeng Bakery in Hartbeespoort, North West. Send us questions, feedback, suggestions or enquiries about our fresh bread, cakes and bakery services.">
+
+    <meta name="keywords" content="Contact Thabeng Bakery, Hartbeespoort bakery, bakery contact details, North West bakery, cake enquiries, bakery feedback">
+
+    <meta name="author" content="Thabeng Bakery">
+    <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Website Animations -->
+    <script src="js/animations.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Website Header -->
     <header>
+        <div class="header-container">
+            <h1 class="logo">Thabeng Bakery</h1>
 
-        <h1>Thabeng Bakery</h1>
-
-        <!-- Main Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Main Content -->
     <main>
 
-        <section>
+        <!-- Contact Page Introduction -->
+        <section class="welcome">
+            <h2 class="section-heading">Contact Thabeng Bakery</h2>
 
-            <h2>Contact Thabeng Bakery</h2>
-
-            <p>
-                We would love to hear from you. Contact us for product
-                enquiries, customised cakes and general information.
+            <p class="section-subtitle">
+                We would love to hear from you! Send us your questions,
+                feedback or suggestions. Our team will be happy to assist.
             </p>
+        </section>
+
+        <!-- Contact Information and Form -->
+        <section class="contact-section">
+
+            <div class="contact-container">
+
+                <div class="contact-information">
+                    <h2>Get in Touch</h2>
+
+                    <p>
+                        Have a question about our products or services?
+                        Contact our team and we will be happy to assist.
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:thabengbakery@gmail.com">
+                            thabengbakery@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong>
+                        Hartbeespoort, North West, South Africa
+                    </p>
+
+                    <p>
+                        Browse our
+                        <a href="products.html">bakery products</a>
+                        or visit our
+                        <a href="enquiry.html">enquiry page</a>
+                        for product and service enquiries.
+                    </p>
+                </div>
+
+                <div class="contact-form-container">
+
+                    <h2>Send Us a Message</h2>
+
+                    <form id="contactForm"
+                          action="https://formsubmit.co/ajax/thabengbakery@gmail.com"
+                          method="POST">
+
+                        <input type="hidden" name="_subject"
+                               value="New Contact Message - Thabeng Bakery">
+
+                        <input type="hidden" name="_template"
+                               value="table">
+
+                        <input type="text" name="_honey"
+                               style="display:none"
+                               tabindex="-1"
+                               autocomplete="off">
+
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+
+                            <input type="text"
+                                   id="contactName"
+                                   name="name"
+                                   required
+                                   minlength="2"
+                                   maxlength="60"
+                                   autocomplete="name"
+                                   placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+
+                            <input type="email"
+                                   id="contactEmail"
+                                   name="email"
+                                   required
+                                   maxlength="100"
+                                   autocomplete="email"
+                                   placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+
+                            <input type="tel"
+                                   id="contactPhone"
+                                   name="phone"
+                                   pattern="(\+27|0)[6-8][0-9]{8}"
+                                   title="Enter a valid South African mobile number."
+                                   autocomplete="tel"
+                                   placeholder="e.g. 0821234567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="messageType">Message Type</label>
+
+                            <select id="messageType"
+                                    name="message_type"
+                                    required>
+
+                                <option value="">Select message type</option>
+                                <option value="General Question">General Question</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Complaint">Complaint</option>
+                                <option value="Suggestion">Suggestion</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+
+                            <textarea id="contactMessage"
+                                      name="message"
+                                      rows="6"
+                                      required
+                                      minlength="10"
+                                      maxlength="1000"
+                                      placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                                id="submitContact"
+                                class="form-button">
+                            Send Message
+                        </button>
+
+                        <p id="contactResponse"
+                           class="form-response"
+                           role="status"
+                           aria-live="polite"></p>
+
+                    </form>
+                </div>
+
+            </div>
 
         </section>
 
-        <!-- Location One -->
-        <section>
+        <!-- Interactive Location Map -->
+        <section class="map-section">
 
-            <h3>Johannesburg Central</h3>
+            <div class="section-heading">
+                <h2>Find Us in Hartbeespoort</h2>
 
-            <p>
-                Thabeng Bakery – Johannesburg Central
+                <p>
+                    Thabeng Bakery serves the Hartbeespoort area
+                    in the North West Province.
+                </p>
+            </div>
+
+            <div id="bakeryMap"
+                 role="application"
+                 aria-label="Interactive map showing the general Hartbeespoort area">
+            </div>
+
+            <p class="map-note">
+                Please note: This map shows the general Hartbeespoort
+                area and not the bakery's exact street address.
             </p>
-
-            <p>
-                Phone: 011 000 0000
-            </p>
-
-            <p>
-                Email: info@thabengbakery.co.za
-            </p>
-
-        </section>
-
-        <!-- Location Two -->
-        <section>
-
-            <h3>Sandton</h3>
-
-            <p>
-                Thabeng Bakery – Sandton
-            </p>
-
-            <p>
-                Phone: 011 000 0001
-            </p>
-
-            <p>
-                Email: info@thabengbakery.co.za
-            </p>
-
-        </section>
-
-        <!-- Operating Hours -->
-        <section>
-
-            <h2>Operating Hours</h2>
-
-            <ul>
-                <li>Monday – Friday: 07:00 – 17:00</li>
-                <li>Saturday: 08:00 – 15:00</li>
-                <li>Sunday: 09:00 – 14:00</li>
-            </ul>
-
-        </section>
-
-        <!-- Contact Form -->
-        <section>
-
-            <h2>Send Us a Message</h2>
-
-            <form>
-
-                <label for="contact-name">Full Name:</label>
-                <input type="text" id="contact-name" name="contact-name" required>
-
-                <label for="contact-email">Email Address:</label>
-                <input type="email" id="contact-email" name="contact-email" required>
-
-                <label for="contact-message">Message:</label>
-                <textarea id="contact-message" name="contact-message" rows="6" required></textarea>
-
-                <button type="submit">Send Message</button>
-
-            </form>
 
         </section>
 
     </main>
 
-    <!-- Website Footer -->
     <footer>
-
         <p>&copy; 2026 Thabeng Bakery. All Rights Reserved.</p>
 
+        <p>
+            Hartbeespoort, North West, South Africa |
+            <a href="mailto:thabengbakery@gmail.com">
+                thabengbakery@gmail.com
+            </a>
+        </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Leaflet Map JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/contact.js"></script>
+
+    <!-- Interactive Map -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const mapElement = document.getElementById("bakeryMap");
+
+            if (mapElement && typeof L !== "undefined") {
+
+                const map = L.map("bakeryMap").setView(
+                    [-25.7287, 27.8700], 13
+                );
+
+                L.tileLayer(
+                    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    {
+                        attribution:
+                            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        maxZoom: 19
+                    }
+                ).addTo(map);
+
+                L.marker([-25.7287, 27.8700])
+                    .addTo(map)
+                    .bindPopup(
+                        "<strong>Hartbeespoort</strong><br>General area served by Thabeng Bakery."
+                    )
+                    .openPopup();
+            }
+
+        });
+    </script>
 
 </body>
-
 </html>

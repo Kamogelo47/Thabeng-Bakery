@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,44 +6,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Enquiry | Thabeng Bakery</title>
+    <title>Bakery Enquiries and Custom Cake Orders | Thabeng Bakery</title>
 
-    <!-- Main website stylesheet -->
+    <meta name="description" content="Make an enquiry at Thabeng Bakery in Hartbeespoort, North West. Ask about fresh bread, birthday cakes, cupcakes, pastries, custom orders and bakery services.">
+
+    <meta name="keywords" content="Thabeng Bakery enquiries, bakery enquiries Hartbeespoort, custom cake orders, birthday cakes, bakery products, bakery services">
+
+    <meta name="author" content="Thabeng Bakery">
+
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/animations.js" defer></script>
 </head>
 
 <body>
 
-    <!-- ==================== HEADER ==================== -->
-
+    <!-- HEADER -->
     <header>
 
         <div class="header-container">
 
             <h1 class="logo">Thabeng Bakery</h1>
 
-            <!-- Main navigation menu -->
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">About Us</a>
-                    </li>
-
-                    <li>
-                        <a href="products.html">Products</a>
-                    </li>
-
-                    <li>
-                        <a href="enquiry.html">Enquiry</a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
@@ -50,219 +44,237 @@
 
     </header>
 
-
-    <!-- ==================== MAIN CONTENT ==================== -->
-
+    <!-- MAIN CONTENT -->
     <main>
 
-        <!-- Page introduction -->
-
-        <section class="page-intro">
+        <!-- PAGE INTRODUCTION -->
+        <section class="welcome">
 
             <div class="section-heading">
 
-                <p class="section-subtitle">
-                    GET IN TOUCH
-                </p>
+                <p class="section-subtitle">WE WOULD LOVE TO HEAR FROM YOU</p>
 
-                <h2>
-                    Make an Enquiry
-                </h2>
+                <h2>Make an Enquiry</h2>
 
             </div>
 
             <p>
-                Interested in one of our products or need a customised
-                cake for a special occasion? Complete the enquiry form
-                below and tell us what you are looking for.
+                Interested in our bakery products or services?
+                Whether you need freshly baked products, a customised
+                celebration cake or information about our services,
+                complete the form below and let us assist you.
             </p>
 
         </section>
 
-
-        <!-- ==================== ENQUIRY FORM ==================== -->
-
+        <!-- ENQUIRY FORM -->
         <section class="enquiry-section">
-
-            <h2>Enquiry Form</h2>
 
             <div class="enquiry-container">
 
+                <div class="section-heading">
+
+                    <h2>Customer Enquiry Form</h2>
+
+                    <p>
+                        Please provide your details so that we can
+                        respond to your enquiry. Fields marked with *
+                        are required.
+                    </p>
+
+                </div>
+
                 <form
-                    class="enquiry-form"
-                    action="#"
-                    method="post"
+                    id="enquiryForm"
+                    action="https://formsubmit.co/ajax/thabengbakery@gmail.com"
+                    method="POST"
                 >
 
-                    <!-- Full Name -->
+                    <!-- EMAIL SETTINGS -->
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Customer Enquiry - Thabeng Bakery"
+                    >
 
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table"
+                    >
+
+                    <!-- ANTI-SPAM HONEYPOT -->
+                    <input
+                        type="text"
+                        name="_honey"
+                        style="display:none"
+                        tabindex="-1"
+                        autocomplete="off"
+                    >
+
+                    <!-- FULL NAME -->
                     <div class="form-group">
 
-                        <label for="name">
-                            Full Name
-                        </label>
+                        <label for="fullName">Full Name *</label>
 
                         <input
                             type="text"
-                            id="name"
-                            name="name"
+                            id="fullName"
+                            name="Full Name"
                             placeholder="Enter your full name"
+                            minlength="2"
+                            maxlength="80"
+                            autocomplete="name"
                             required
                         >
 
                     </div>
 
-
-                    <!-- Email Address -->
-
+                    <!-- EMAIL -->
                     <div class="form-group">
 
-                        <label for="email">
-                            Email Address
-                        </label>
+                        <label for="email">Email Address *</label>
 
                         <input
                             type="email"
                             id="email"
-                            name="email"
-                            placeholder="Enter your email address"
+                            name="Email"
+                            placeholder="example@email.com"
+                            autocomplete="email"
                             required
                         >
 
                     </div>
 
-
-                    <!-- Phone Number -->
-
+                    <!-- PHONE -->
                     <div class="form-group">
 
-                        <label for="phone">
-                            Phone Number
-                        </label>
+                        <label for="phone">Phone Number *</label>
 
                         <input
                             type="tel"
                             id="phone"
-                            name="phone"
-                            placeholder="Enter your phone number"
+                            name="Phone Number"
+                            placeholder="e.g. 0821234567"
+                            pattern="(\+27|0)[6-8][0-9]{8}"
+                            title="Enter a valid South African mobile number, e.g. 0821234567 or +27821234567."
+                            autocomplete="tel"
                             required
                         >
 
                     </div>
 
-
-                    <!-- Product Selection -->
-
+                    <!-- ENQUIRY TYPE -->
                     <div class="form-group">
 
-                        <label for="product">
-                            Product of Interest
-                        </label>
+                        <label for="enquiryType">Type of Enquiry *</label>
 
                         <select
-                            id="product"
-                            name="product"
+                            id="enquiryType"
+                            name="Enquiry Type"
                             required
                         >
 
-                            <option value="">
-                                -- Select a product --
-                            </option>
-
-                            <option value="bread">
-                                Fresh Bread
-                            </option>
-
-                            <option value="birthday-cake">
-                                Birthday Cake
-                            </option>
-
-                            <option value="cupcakes">
-                                Specialty Cupcakes
-                            </option>
-
-                            <option value="pastries">
-                                Pastries
-                            </option>
-
-                            <option value="custom-cake">
-                                Custom Cake
-                            </option>
-
-                            <option value="assorted-cakes">
-                                Assorted Baked Cakes
-                            </option>
+                            <option value="">Select an enquiry type</option>
+                            <option value="Product Enquiry">Product Enquiry</option>
+                            <option value="Custom Cake Order">Custom Cake Order</option>
+                            <option value="Service Enquiry">Service Enquiry</option>
+                            <option value="Volunteering">Volunteering</option>
+                            <option value="Sponsorship">Sponsorship</option>
+                            <option value="Other">Other</option>
 
                         </select>
 
                     </div>
 
+                    <!-- PRODUCT OR SERVICE -->
+                    <div class="form-group">
 
-                    <!-- Quantity -->
+                        <label for="product">
+                            Product or Service Interested In
+                        </label>
 
+                        <select id="product" name="Product or Service">
+
+                            <option value="">Select a product or service</option>
+                            <option value="Fresh Bread">Fresh Bread</option>
+                            <option value="Birthday Cakes">Birthday Cakes</option>
+                            <option value="Specialty Cupcakes">Specialty Cupcakes</option>
+                            <option value="Pastries">Pastries</option>
+                            <option value="Custom Cakes">Custom Cakes</option>
+                            <option value="Assorted Baked Cakes">Assorted Baked Cakes</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- PREFERRED DATE -->
+                    <div class="form-group">
+
+                        <label for="preferredDate">
+                            Preferred Date (if applicable)
+                        </label>
+
+                        <input
+                            type="date"
+                            id="preferredDate"
+                            name="Preferred Date"
+                        >
+
+                    </div>
+
+                    <!-- QUANTITY -->
                     <div class="form-group">
 
                         <label for="quantity">
-                            Quantity
+                            Quantity (if applicable)
                         </label>
 
                         <input
                             type="number"
                             id="quantity"
-                            name="quantity"
+                            name="Quantity"
                             min="1"
+                            max="500"
                             placeholder="Enter quantity"
-                            required
                         >
 
                     </div>
 
-
-                    <!-- Required Date -->
-
+                    <!-- MESSAGE -->
                     <div class="form-group">
 
-                        <label for="date">
-                            Required Date
-                        </label>
-
-                        <input
-                            type="date"
-                            id="date"
-                            name="date"
-                            required
-                        >
-
-                    </div>
-
-
-                    <!-- Additional Details -->
-
-                    <div class="form-group">
-
-                        <label for="message">
-                            Additional Details
-                        </label>
+                        <label for="message">Your Enquiry *</label>
 
                         <textarea
                             id="message"
-                            name="message"
+                            name="Message"
                             rows="6"
-                            placeholder="Tell us about your order or any special requirements..."
+                            minlength="10"
+                            maxlength="1000"
+                            placeholder="Tell us more about what you need..."
                             required
                         ></textarea>
 
                     </div>
 
-
-                    <!-- Submit Button -->
-
+                    <!-- SUBMIT BUTTON -->
                     <button
                         type="submit"
-                        class="button form-button"
+                        id="submitEnquiry"
+                        class="form-button"
                     >
                         Submit Enquiry
                     </button>
+
+                    <!-- RESPONSE MESSAGE -->
+                    <p
+                        id="enquiryResponse"
+                        class="form-response"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
 
                 </form>
 
@@ -270,25 +282,18 @@
 
         </section>
 
-
-        <!-- ==================== CONTACT CALL TO ACTION ==================== -->
-
+        <!-- ADDITIONAL INFORMATION -->
         <section class="call-to-action">
 
-            <h2>
-                Have Questions?
-            </h2>
+            <h2>Need More Information?</h2>
 
             <p>
-                If you would prefer to speak to us directly, visit our
-                Contact page for our contact details and bakery
-                locations.
+                You can also contact Thabeng Bakery directly
+                if you have any questions about our products
+                and services.
             </p>
 
-            <a
-                href="contact.html"
-                class="button"
-            >
+            <a href="contact.html" class="button">
                 Contact Us
             </a>
 
@@ -296,21 +301,19 @@
 
     </main>
 
-
-    <!-- ==================== FOOTER ==================== -->
-
+    <!-- FOOTER -->
     <footer>
 
-        <p>
-            &copy; 2026 Thabeng Bakery. All Rights Reserved.
-        </p>
+        <p>&copy; 2026 Thabeng Bakery. All Rights Reserved.</p>
+
+        <p>Hartbeespoort, North West, South Africa</p>
 
     </footer>
 
-
-    <!-- JavaScript file -->
-    <script src="js/script.js"></script>
+    <!-- ENQUIRY JAVASCRIPT -->
+    <script src="js/enquiry.js"></script>
 
 </body>
 
 </html>
+```

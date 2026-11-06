@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dancing-kashata-c9a01f.netlify.app/sitemap.xml

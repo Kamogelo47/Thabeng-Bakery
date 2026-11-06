@@ -1,0 +1,186 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bakery Products | Fresh Bread, Cakes and Pastries | Thabeng Bakery</title>
+
+    <meta name="description" content="Explore Thabeng Bakery's selection of freshly baked bread, birthday cakes, cupcakes, pastries and custom cakes in Hartbeespoort, North West.">
+
+    <meta name="keywords" content="Thabeng Bakery, bakery products, fresh bread, birthday cakes, cupcakes, pastries, custom cakes, Hartbeespoort bakery">
+
+    <meta name="author" content="Thabeng Bakery">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/animations.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="header-container">
+
+            <h1 class="logo">Thabeng Bakery</h1>
+
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html" aria-current="page">Products</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="welcome">
+
+            <div class="section-heading">
+
+                <p class="section-subtitle">FRESHLY BAKED WITH CARE</p>
+
+                <h2>Our Bakery Products</h2>
+
+            </div>
+
+            <p>
+                Discover our selection of freshly baked bread,
+                delicious cakes, cupcakes, pastries and customised
+                celebration cakes at Thabeng Bakery.
+            </p>
+
+        </section>
+
+        <!-- PRODUCT SEARCH AND FILTERS -->
+        <section class="products-section">
+
+            <div class="section-heading">
+
+                <h2>Find Your Favourite Product</h2>
+
+                <p>
+                    Search, filter and sort our bakery products
+                    to find exactly what you are looking for.
+                </p>
+
+            </div>
+
+            <div class="product-controls">
+
+                <label for="productSearch">Search products:</label>
+
+                <input
+                    type="search"
+                    id="productSearch"
+                    placeholder="Search bakery products..."
+                    aria-label="Search bakery products"
+                >
+
+                <label for="categoryFilter">Filter by category:</label>
+
+                <select id="categoryFilter">
+                    <option value="all">All Products</option>
+                    <option value="bread">Bread</option>
+                    <option value="cakes">Cakes</option>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="pastries">Pastries</option>
+                </select>
+
+                <label for="sortProducts">Sort products:</label>
+
+                <select id="sortProducts">
+                    <option value="default">Default Order</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+
+            </div>
+
+            <!-- DYNAMIC PRODUCT LIST -->
+            <h2>Available Products</h2>
+
+            <p id="productCount" aria-live="polite">
+                Loading products...
+            </p>
+
+            <div class="product-grid" id="productGrid">
+                <p>Loading bakery products...</p>
+            </div>
+
+        </section>
+
+        <!-- PRODUCT ENQUIRY -->
+        <section class="call-to-action">
+
+            <h2>Want Something Special?</h2>
+
+            <p>
+                Looking for a personalised cake or a special
+                bakery order? Contact Thabeng Bakery and tell
+                us what you need.
+            </p>
+
+            <a href="enquiry.html" class="button">
+                Make an Enquiry
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- PRODUCT IMAGE LIGHTBOX -->
+    <div
+        id="productLightbox"
+        class="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Product image preview"
+    >
+
+        <button
+            type="button"
+            id="closeLightbox"
+            class="close-lightbox"
+            aria-label="Close image"
+        >
+            &times;
+        </button>
+
+        <img id="lightboxImage" src="" alt="">
+
+        <p id="lightboxCaption" class="lightbox-caption"></p>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>&copy; 2026 Thabeng Bakery. All Rights Reserved.</p>
+
+        <p>Hartbeespoort, North West, South Africa</p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+```
